@@ -1,0 +1,15 @@
+<div class="text-center">
+  <h1>Make the party happen!</h1>
+  <%= form_for @party, url: partys_path do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name, :class => "form-control" %>
+    <br>
+    <%= form.label :location %>
+    <%= form.text_field :location, :class => "form-control" %>
+    <br>
+    <%= form.label :date %>
+    <%= form.date_field :date, :class => "form-control" %>
+    <br>
+    <%= form.submit :class => "btn btn-primary" %>
+  <% end %>
+</div>

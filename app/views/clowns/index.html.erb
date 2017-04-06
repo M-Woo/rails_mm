@@ -1,0 +1,21 @@
+<div class="text-center">
+  <h1>Meet our wonderful team</h1>
+  <% if ! @clowns || @clowns.length == 0 %>
+    <p>When there's no clowns to come to your party... so sad...</p>
+    <h3 class="text-danger">
+    Would you like to
+    <a href="/clowns/new">become a clown</a>
+    and make all the children so happy?</h3>
+  <% else %>
+    <h3>All these great clowns, just waiting to be invited to your party!</h3>
+    <ul class="list-group">
+    <% @clowns.each do |c| %>
+      <li class="list-group-item">
+        <a href="/clowns/<%= c.id %>">
+          <%= c.age.to_s %> year old <%= c.name %>
+        </a>
+      </li>
+    <% end %>
+    </ul>
+  <% end %>
+</div>

@@ -1,0 +1,22 @@
+<div class="text-center">
+  <h1>Join our awesome team</h1>
+  <%= form_for @clown do |form| %>
+    <div class="form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, :class => "form-control" %>
+      <br>
+      <%= form.label :costume %>
+      <%= form.text_field :costume, :class => "form-control" %>
+      <br>
+      <%= form.label :age %>
+      <%= form.number_field :age, :class => "form-control" %>
+      <br>
+      <%= form.label :tricks %>
+      <%= form.text_area :tricks, :class => "form-control" %>
+      <br>
+      <%= form.collection_check_boxes :party_ids, @partys, :id, :name %>
+      <br>
+      <%= form.submit :class => "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

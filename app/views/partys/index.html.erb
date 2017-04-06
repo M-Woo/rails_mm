@@ -1,0 +1,18 @@
+<div class="text-center">
+  <h1>Come join the party!!</h1>
+  <% if ! @partys || @partys.length == 0 %>
+    <p>When there's no party to be found...</p>
+    <h3 class="text-danger">Create your own!</h3>
+  <% else %>
+    <h3>All these cool clown parties you're invited to</h3>
+    <ul class="list-group">
+    <% @partys.each do |p| %>
+      <li class="list-group-item">
+        <a href="/partys/<%= p.id %>">
+          <%= p.name %> at <%= p.location %>
+        </a>
+      </li>
+    <% end %>
+    </ul>
+  <% end %>
+</div>

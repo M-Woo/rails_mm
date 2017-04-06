@@ -1,0 +1,18 @@
+<div class="text-center">
+  <h1><%= @clown.name %> the Clown</h1>
+  <h3 class="text-danger">He's dyin' to meet ya</h3>
+  <h3>Some stats about <%= @clown.name %></h3>
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Age:</strong> <%= @clown.age.to_s %></li>
+    <li class="list-group-item"><strong>Costume:</strong> <%= @clown.costume %></li>
+    <li class="list-group-item"><strong>Tricks:</strong> <%= @clown.tricks %></li>
+  </ul>
+  <h2>Parties that <%= @clown.name %> is attending</h2>
+  <% @clown.partys.each do |p| %>
+    <div>
+      <a href="/partys/<%= p.id %>">
+        <h3><strong><%= p.name %></strong> at <%= p.location %></h3>
+      </a>
+    </div>
+  <% end %>
+</div>

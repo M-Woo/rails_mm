@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsRentAClown</title>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <%= yield %>
+      <hr>
+      <div class="text-center">
+        <a class="btn btn-primary" href="/">Home</a>
+        <a class="btn btn-info" href="/partys">Parties</a>
+        <a class="btn btn-warning" href="/clowns">Clowns</a>
+        <a class="btn btn-danger" href="/clowns/new">Become Clown</a>
+      </div>
+    </div>
+  </body>
+</html>
